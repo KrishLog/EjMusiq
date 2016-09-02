@@ -150,7 +150,6 @@
         var transformFnNotations = Modernizr.csstransforms3d ?
       { // 3D transform functions
 
-        //Puppy - Added buffer to the translate value
         translate : function ( position ) {
           return 'translate3d(' + position[0] + 'px, ' + position[1] + 'px, 0) ';
         },
