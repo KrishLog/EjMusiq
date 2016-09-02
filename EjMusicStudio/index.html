@@ -3,552 +3,555 @@
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
-    	<!-- meta charec set -->
-        <meta charset="utf-8">
-		<!-- Always force latest IE rendering engine or request Chrome Frame -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<!-- Page Title -->
-        <title>EJ Music Studio</title>		
-		<!-- Meta Description -->
-        <meta name="description" content="">
-		<!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Google Font -->
-		
-		 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> 
+<head>
+	<!-- meta charec set -->
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine or request Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Page Title -->
+	<title>EJ Music Studio</title>
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- CSS
-		================================================== -->
-		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- Twitter Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- jquery.fancybox  -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-		<!-- animate -->
-        <link rel="stylesheet" href="css/animate.css">
-		<!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/main.css">
-		<!-- media-queries -->
-        <link rel="stylesheet" href="css/media-queries.css">
+	<!-- Google Font -->
 
-		<!-- Modernizer Script for old Browsers -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    </head>
-	
-    <body id="body">
-	
-		<!-- preloader -->
-		<div id="preloader">
-			<img src="img/preloader.gif" alt="Preloader">
+<!-- CSS
+	================================================== -->
+	<!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Twitter Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- jquery.fancybox  -->
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<!-- animate -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- media-queries -->
+	<link rel="stylesheet" href="css/media-queries.css">
+
+	<!-- Modernizer Script for old Browsers -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body id="body">
+
+	<!-- preloader -->
+	<div id="preloader">
+		<img src="img/preloader.gif" alt="Preloader">
+	</div>
+	<!-- end preloader -->
+
+<!--
+Fixed Navigation
+==================================== -->
+<header id="navigation" class="navbar-fixed-top navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<!-- responsive nav button -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="fa fa-bars fa-2x"></i>
+			</button>
+			<!-- /responsive nav button -->
+
+			<!-- logo -->
+			<a class="navbar-brand" href="#body">
+				<h2 id="logo">
+					<!-- <img src="img/logo.png" alt="Brandi"> -->
+					EJ Sound Studios
+				</h2>
+			</a>
+			<!-- /logo -->
 		</div>
-		<!-- end preloader -->
+		<!-- main nav -->
+		<nav class="collapse navbar-collapse navbar-right" role="navigation">
+			<ul id="nav" class="nav navbar-nav">
+				<li class="current"><a href="#body">Home</a></li>
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#works">Work</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<!-- /main nav -->
 
-        <!-- 
-        Fixed Navigation
-        ==================================== -->
-        <header id="navigation" class="navbar-fixed-top navbar">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- responsive nav button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-bars fa-2x"></i>
-                    </button>
-					<!-- /responsive nav button -->
-					
-					<!-- logo -->
-                    <a class="navbar-brand" href="#body">
-						<h2 id="logo">
-							<!-- <img src="img/logo.png" alt="Brandi"> -->
-							EJ Sound Studios
-						</h2>
-					</a>
-					<!-- /logo -->
-                </div>
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li class="current"><a href="#body">Home</a></li>
-						<li><a href="#aboutus">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#works">Work</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-				<!-- /main nav -->
-				
-            </div>
-        </header>
-        <!--
-        End Fixed Navigation
-        ==================================== -->
-		
-		
-		
-        <!--
-        Home Slider
-        ==================================== -->
-		
-		<section id="slider">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			
-				<!-- Indicators bullet -->
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				</ol>
-				<!-- End Indicators bullet -->				
-				
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					
-					<!-- single slide -->
-					<div class="item active" style="background-image: url(img/keyboard.jpg);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Ellwyn Joshua</span>!</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Music Director</span> 3 feature films and over 50 short films</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated"> Winner - 8th Commfest film festival, Canada; Internatinal short film festival, Gujarat India</p>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">Nominated best upcoming music director @ Radio Mirchi Awards</p>
+	</div>
+</header>
+<!--
+End Fixed Navigation
+==================================== -->
 
-							<ul class="social-links text-center">
-								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
-					
-					<!-- single slide -->
-					<div class="item" style="background-image: url(img/studio_mic.jpg);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Team</span>!</h2>
-							<h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-							<p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals</p>
-							
-							<ul class="social-links text-center">
-								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
 
-					<!-- single slide -->
-					<div class="item" style="background-image: url(img/service-bg.jpg);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Team</span>!</h2>
-							<h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-							<p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals</p>
-							
-							<ul class="social-links text-center">
-								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
-					
-				</div>
-				<!-- End Wrapper for slides -->
-				
-			</div>
-		</section>
-		
-        <!--
-        End Home SliderEnd
-        ==================================== -->
-		
-		<!--
-        About Us
-        ==================================== -->
-		
-		<section id="aboutus" class="aboutus">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-						<h2>About Us</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-					</div>
 
-					<!-- service item -->
-					
-							<div class="service-desc">
-								<h3 class="text-center">Hello there!</h3>
+<!--
+Home Slider
+==================================== -->
 
-								<p>Ej Sound Studios is a penthouse garden studio, a premier audio recording and music production studio based in Bangalore. We handle all your music and audio needs starting from composing, to recording, to music production (programming), to audio dubbing, to sound effects, to voice over's, to mixing and mastering. We also offer video shooting and complete post production services</p>
+<section id="slider">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-								<p>EJ's obsession to music has resulted in the state-of-the art facilities and pars with all international industry standards. At EJ we do not comprise on quality. We are always on the process of elevating our benchmark. EJ is equipped with the most sophisticated audio and video gadgets, thus generating the best and pure form of sound and music.</p>
+		<!-- Indicators bullet -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+		<!-- End Indicators bullet -->
 
-								<p>Ellwyn Joshua Music Director founder of EJ Sound Studios started his studio in the year 2010. After completing his engineering in the branch of electronics and communications he started working full time in the music industry. As a music director he has worked and completed 3 Feature films and over 50 Short films. He was nominated the "Best Upcoming music director in the Radio Mirchi Music Awards 2012". Baby Box the short film for which he composed origional score has won making a difference award in the "8th Comm fest film festival , Canada", It has also "won the best national short film award" in the International film festival , Gujarat. He has also worked on several TV commercials, Radio jingles, music albums and corporate films.</p>
-							</div>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
 
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<!-- <div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-pencil fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Development</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div> -->
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<!-- <div class="col-md-4 wow fadeInRight" data-wow-duration="500ms"  data-wow-delay="900ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-bullhorn fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Consulting</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div> -->
-					<!-- end service item -->
-						
+			<!-- single slide -->
+			<div class="item active" style="background-image: url(img/keyboard.jpg);">
+				<div class="carousel-caption">
+					<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Ellwyn Joshua</span>!</h2>
+					<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Music Director</span> 3 feature films and over 50 short films</h3>
+					<p data-wow-duration="1000ms" class="wow slideInRight animated"> Winner - 8th Commfest film festival, Canada; Internatinal short film festival, Gujarat India</p>
+					<p data-wow-duration="1000ms" class="wow slideInRight animated">Nominated best upcoming music director @ Radio Mirchi Awards</p>
+
+					<ul class="social-links text-center">
+						<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+					</ul>
 				</div>
 			</div>
-		</section>
-		
-        <!--
-        End Features
-        ==================================== -->
+			<!-- end single slide -->
 
+			<!-- single slide -->
+			<div class="item" style="background-image: url(img/studio_mic.jpg);">
+				<div class="carousel-caption">
+					<h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Team</span>!</h2>
+					<h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
+					<p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals</p>
 
-        <!--
-        Features
-        ==================================== -->
-		
-		<section id="services" class="features">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-						<h2>Services</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-					</div>
-
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-microphone fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Audio recording</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-laptop fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Mix & Mastering</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInRight mb50" data-wow-duration="500ms"  data-wow-delay="900ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-desktop fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Tv /Radio Spots</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-						
-						<!-- service item -->
-					<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-bullhorn fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Voice Over</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-music fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Background Score</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInRight mb50" data-wow-duration="500ms"  data-wow-delay="900ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-folder fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Album Production</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-						
-						<!-- service item -->
-					<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-lastfm fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Signature Music</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-spinner fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Dubbing</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInRight mb50" data-wow-duration="500ms"  data-wow-delay="900ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-video-camera fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Video Shooting</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-						
-							<!-- service item -->
-					<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-file-video-o fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Editting</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					<!-- service item -->
-					<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-film fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>DI</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					<!-- end service item -->
-					
-					
-						
+					<ul class="social-links text-center">
+						<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+					</ul>
 				</div>
 			</div>
-		</section>
-		
-        <!--
-        End Features
-        ==================================== -->
-		
-		
-        <!--
-        Our Works
-        ==================================== -->
-		
-		<section id="works" class="works">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center">
-						<h2>Works</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+			<!-- end single slide -->
+
+			<!-- single slide -->
+			<div class="item" style="background-image: url(img/service-bg.jpg);">
+				<div class="carousel-caption">
+					<h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Team</span>!</h2>
+					<h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
+					<p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals</p>
+
+					<ul class="social-links text-center">
+						<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+						<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end single slide -->
+
+		</div>
+		<!-- End Wrapper for slides -->
+
+	</div>
+</section>
+
+<!--
+End Home SliderEnd
+==================================== -->
+
+<!--
+About Us
+==================================== -->
+
+<section id="aboutus" class="aboutus">
+	<div class="container">
+		<div class="row">
+
+			<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+				<h2>About Us</h2>
+				<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+			</div>
+
+			<!-- service item -->
+
+			<div class="service-desc">
+				<h3 class="text-center">Hello there!</h3>
+
+				<p>Ej Sound Studios is a penthouse garden studio, a premier audio recording and music production studio based in Bangalore. We handle all your music and audio needs starting from composing, to recording, to music production (programming), to audio dubbing, to sound effects, to voice over's, to mixing and mastering. We also offer video shooting and complete post production services</p>
+
+				<p>EJ's obsession to music has resulted in the state-of-the art facilities and pars with all international industry standards. At EJ we do not comprise on quality. We are always on the process of elevating our benchmark. EJ is equipped with the most sophisticated audio and video gadgets, thus generating the best and pure form of sound and music.</p>
+
+				<p>Ellwyn Joshua Music Director founder of EJ Sound Studios started his studio in the year 2010. After completing his engineering in the branch of electronics and communications he started working full time in the music industry. As a music director he has worked and completed 3 Feature films and over 50 Short films. He was nominated the "Best Upcoming music director in the Radio Mirchi Music Awards 2012". Baby Box the short film for which he composed origional score has won making a difference award in the "8th Comm fest film festival , Canada", It has also "won the best national short film award" in the International film festival , Gujarat. He has also worked on several TV commercials, Radio jingles, music albums and corporate films.</p>
+			</div>
+
+			<!-- end service item -->
+
+			<!-- service item -->
+<!-- <div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+<div class="service-item">
+<div class="service-icon">
+<i class="fa fa-pencil fa-2x"></i>
+</div>
+
+<div class="service-desc">
+<h3>Development</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+</div>
+</div>
+</div> -->
+<!-- end service item -->
+
+<!-- service item -->
+<!-- <div class="col-md-4 wow fadeInRight" data-wow-duration="500ms"  data-wow-delay="900ms">
+<div class="service-item">
+<div class="service-icon">
+<i class="fa fa-bullhorn fa-2x"></i>
+</div>
+
+<div class="service-desc">
+<h3>Consulting</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+</div>
+</div>
+</div> -->
+<!-- end service item -->
+
+</div>
+</div>
+</section>
+
+<!--
+End Features
+==================================== -->
+
+
+<!--
+Features
+==================================== -->
+
+<section id="services" class="features">
+	<div class="container">
+		<div class="row">
+
+			<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+				<h2>Services</h2>
+				<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+			</div>
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-microphone fa-2x"></i>
 					</div>
-					
-					<div class="sec-sub-title text-center">
+
+					<div class="service-desc">
+						<h3>Audio recording</h3>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
 					</div>
-					
-					<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
-						<ul class="text-center">
-							<li><a href="#" data-filter="*" class="current">All</a></li>
-							<li><a href="#" data-filter=".demoreal">Demo real</a></li>
-							<li><a href="#" data-filter=".jaggi">Jaggi</a></li>
-							<li><a href="#" data-filter=".toofan">Toofan</a></li>
-						</ul>
-					</div>
-					
 				</div>
 			</div>
-			
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-laptop fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Mix & Mastering</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInRight mb50" data-wow-duration="500ms"  data-wow-delay="900ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-desktop fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Tv /Radio Spots</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-bullhorn fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Voice Over</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-music fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Background Score</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInRight mb50" data-wow-duration="500ms"  data-wow-delay="900ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-folder fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Album Production</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-lastfm fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Signature Music</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-spinner fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Dubbing</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInRight mb50" data-wow-duration="500ms"  data-wow-delay="900ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-video-camera fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Video Shooting</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInLeft mb50" data-wow-duration="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-file-video-o fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>Editting</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+			<!-- service item -->
+			<div class="col-md-4 wow fadeInUp mb50" data-wow-duration="500ms" data-wow-delay="500ms">
+				<div class="service-item">
+					<div class="service-icon">
+						<i class="fa fa-film fa-2x"></i>
+					</div>
+
+					<div class="service-desc">
+						<h3>DI</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+			<!-- end service item -->
+
+
+
+		</div>
+	</div>
+</section>
+
+<!--
+End Features
+==================================== -->
+
+
+<!--
+Our Works
+==================================== -->
+
+<section id="works" class="works">
+	<div class="container">
+		<div class="row">
+
+			<div class="sec-title text-center">
+				<h2>Works</h2>
+				<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+			</div>
+
+			<div class="sec-sub-title text-center">
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+			</div>
+
+			<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+				<ul class="text-center">
+					<li><a href="#" data-filter="*" class="current">All</a></li>
+					<li><a href="#" data-filter=".demoreal">Demo real</a></li>
+					<li><a href="#" data-filter=".jaggi">Jaggi</a></li>
+					<li><a href="#" data-filter=".toofan">Toofan</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
 			<div class="project-wrapper">
-			
+
 				<div class="work-item demoreal">
-					<!--<embed width="320" height="240" src="http://www.youtube.com/embed/ls_X0gCsuTs">--></embed>
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/ls_X0gCsuTs"><img src="http://img.youtube.com/vi/ls_X0gCsuTs/0.jpg" width="270" /></a>
-				</div>
-				
-				<div class="work-item jaggi">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/KtHQxtiMkO4"><img src="http://img.youtube.com/vi/KtHQxtiMkO4/0.jpg" width="270" /></a>					
-				</div>
-				
-				<div class="work-item jaggi">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/J-DAo6Zek4A"><img src="http://img.youtube.com/vi/J-DAo6Zek4A/0.jpg" width="270" /></a>										
-				</div>
-				
-				<div class="work-item jaggi">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/v1vFQqEwiXU"><img src="http://img.youtube.com/vi/v1vFQqEwiXU/0.jpg" width="270" /></a>															
-					<embed width="320" height="240" src="http://www.youtube.com/embed/v1vFQqEwiXU">
-				</div>
-			
-				<div class="work-item toofan">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/GCqE4m5kef8"><img src="http://img.youtube.com/vi/GCqE4m5kef8/0.jpg" width="270" /></a>																				
-				</div>
-				
-				<div class="work-item toofan">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/A9rw6XXY-_0"><img src="http://img.youtube.com/vi/A9rw6XXY-_0/0.jpg" width="270" /></a>																				
-					
-					
-				</div>
-				
-				<div class="work-item toofan">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/49D8UQ370K0"><img src="http://img.youtube.com/vi/49D8UQ370K0/0.jpg" width="270" /></a>																				
-					
-					
-				</div>
-				
-				<div class="work-item toofan">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/hOr3Aik8x84"><img src="http://img.youtube.com/vi/hOr3Aik8x84/0.jpg" width="270" /></a>																				
-					
-					
+					<!--<embed width="320" height="240" src="http://www.youtube.com/embed/ls_X0gCsuTs"></embed>-->
+					<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/ls_X0gCsuTs"><img src="http://img.youtube.com/vi/ls_X0gCsuTs/0.jpg" width="270" /></a>
 				</div>
 
-				<div class="work-item toofan">
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/RltY4672_Hc"><img src="http://img.youtube.com/vi/RltY4672_Hc/0.jpg" width="270" /></a>																				
-					
-					
+				<div class="work-item jaggi">
+					<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/KtHQxtiMkO4"><img src="http://img.youtube.com/vi/KtHQxtiMkO4/0.jpg" width="270" /></a>
 				</div>
 
-				<div class="work-item toofan" >
-        			<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/yGon6E6zbTA"><img src="http://img.youtube.com/vi/yGon6E6zbTA/0.jpg" width="270" /></a>																				
-					
-					<embed  width="320" height="240" src="http://www.youtube.com/embed/yGon6E6zbTA">
+				<div class="work-item jaggi">
+					<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/J-DAo6Zek4A"><img src="http://img.youtube.com/vi/J-DAo6Zek4A/0.jpg" width="270" /></a>
 				</div>
-				
+
+				<div class="work-item jaggi">
+					<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/v1vFQqEwiXU"><img src="http://img.youtube.com/vi/v1vFQqEwiXU/0.jpg" width="270" /></a>
+					<!-- <embed width="320" height="240" src="http://www.youtube.com/embed/v1vFQqEwiXU"> -->
+					</div>
+
+					<div class="work-item toofan">
+						<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/GCqE4m5kef8"><img src="http://img.youtube.com/vi/GCqE4m5kef8/0.jpg" width="270" /></a>
+					</div>
+
+					<div class="work-item toofan">
+						<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/A9rw6XXY-_0"><img src="http://img.youtube.com/vi/A9rw6XXY-_0/0.jpg" width="270" /></a>
+
+
+					</div>
+
+					<div class="work-item toofan">
+						<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/49D8UQ370K0"><img src="http://img.youtube.com/vi/49D8UQ370K0/0.jpg" width="270" /></a>
+
+
+					</div>
+
+					<div class="work-item toofan">
+						<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/hOr3Aik8x84"><img src="http://img.youtube.com/vi/hOr3Aik8x84/0.jpg" width="270" /></a>
+
+
+					</div>
+
+					<div class="work-item toofan">
+						<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/RltY4672_Hc"><img src="http://img.youtube.com/vi/RltY4672_Hc/0.jpg" width="270" /></a>
+
+
+					</div>
+
+					<div class="work-item toofan" >
+						<a class="fancyboxVideo fancybox.iframe" href="http://www.youtube.com/embed/yGon6E6zbTA"><img src="http://img.youtube.com/vi/yGon6E6zbTA/0.jpg" width="270" /></a>
+
+						<!-- <embed  width="320" height="240" src="http://www.youtube.com/embed/yGon6E6zbTA"> -->
+						</div>
+
+					</div>
+				</div>
 			</div>
-		
 
 		</section>
-		
-        <!--
-        End Our Works
-        ==================================== -->
-		
-    	<!--
-        Our Gallery
-        ==================================== -->
-		
-		<section id="gallery" class="works">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center">
-						<h2>Gallery</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center">
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-					</div>
-					
-					<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
-						<ul class="text-center">
-							<li><a href="#" data-filter="*" class="current">All</a></li>
-							<li><a href="#" data-filter=".branding">Demo real</a></li>
-							<li><a href="#" data-filter=".web">web</a></li>
-							<li><a href="#" data-filter=".logo-design">logo design</a></li>
-							<li><a href="#" data-filter=".photography">photography</a></li>
-						</ul>
-					</div>
-					
-				</div>
+
+<!--
+End Our Works
+==================================== -->
+
+<!--
+Our Gallery
+==================================== -->
+
+<section id="gallery" class="works">
+	<div class="container">
+		<div class="row">
+
+			<div class="sec-title text-center">
+				<h2>Gallery</h2>
+				<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
 			</div>
-			
+
+			<div class="sec-sub-title text-center">
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+			</div>
+
+			<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+				<ul class="text-center">
+					<li><a href="#" data-filter="*" class="current">All</a></li>
+					<li><a href="#" data-filter=".branding">Demo real</a></li>
+					<li><a href="#" data-filter=".web">web</a></li>
+					<li><a href="#" data-filter=".logo-design">logo design</a></li>
+					<li><a href="#" data-filter=".photography">photography</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
 			<div class="project-wrapper">
-			
+
 				<figure class="work-item branding">
 					<img src="img/works/item-1.jpg" alt="">
 					<figcaption class="overlay">
@@ -557,7 +560,7 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 				<figure class="work-item web">
 					<img src="img/works/item-2.jpg" alt="">
 					<figcaption class="overlay">
@@ -566,7 +569,7 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 				<figure class="work-item logo-design">
 					<img src="img/works/item-3.jpg" alt="">
 					<figcaption class="overlay">
@@ -575,7 +578,7 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 				<figure class="work-item photography">
 					<img src="img/works/item-4.jpg" alt="">
 					<figcaption class="overlay">
@@ -584,7 +587,7 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-			
+
 				<figure class="work-item branding">
 					<img src="img/works/item-5.jpg" alt="">
 					<figcaption class="overlay">
@@ -593,7 +596,7 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 				<figure class="work-item web">
 					<img src="img/works/item-6.jpg" alt="">
 					<figcaption class="overlay">
@@ -602,7 +605,7 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 				<figure class="work-item logo-design">
 					<img src="img/works/item-7.jpg" alt="">
 					<figcaption class="overlay">
@@ -611,263 +614,264 @@
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 				<figure class="work-item photography">
 					<img src="img/works/item-8.jpg" alt="">
-					<figcaption class="overlay">
+					<!-- <figcaption class="overlay"> -->
 						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-8.jpg"><i class="fa fa-eye fa-lg"></i></a>
 						<h4>Labore et dolore magnam</h4>
 						<p>Photography</p>
 					</figcaption>
 				</figure>
-				
+
 			</div>
-		
-
-		</section>
-		
-        <!--
-        End Gallery
-        ==================================== -->
-
-
-
-		<!--
-        Some fun facts
-        ==================================== -->		
-		
-		<section id="facts" class="facts">
-			<div class="parallax-overlay">
-				<div class="container">
-					<div class="row number-counters">
-						
-						<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-							<h2>Some Fun Facts</h2>
-							<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-						</div>
-						
-						<!-- first count item -->
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
-							<div class="counters-item">
-								<i class="fa fa-clock-o fa-3x"></i>
-								<strong data-to="3200">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p>Hours of Work</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-							<div class="counters-item">
-								<i class="fa fa-users fa-3x"></i>
-								<strong data-to="120">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p>Satisfied Clients</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-							<div class="counters-item">
-								<i class="fa fa-rocket fa-3x"></i>
-								<strong data-to="360">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p> Projects Delivered </p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-							<div class="counters-item">
-								<i class="fa fa-trophy fa-3x"></i>
-								<strong data-to="6454">0</strong>
-								<!-- Set Your Number here. i,e. data-to="56" -->
-								<p>Awards Won</p>
-							</div>
-						</div>
-						<!-- end first count item -->
-				
-					</div>
-				</div>
-			</div>
-		</section>
-		
-        <!--
-        End Some fun facts
-        ==================================== -->
-		
-		
-		<!--
-        Contact Us
-        ==================================== -->		
-		
-		<section id="contact" class="contact">
-			<div class="container">
-				<div class="row mb50">
-				
-					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-						<h2>Wanna Talk?</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-						<p>Drop by and say Hi…</p>
-					</div>
-					
-					<!-- contact address -->
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
-						<div class="contact-address">
-							<h3>EJ Sound Studios</h3>
-							<p>#118 Nesa's Nest, 8th Cross, N.R. Colony</p>
-							<p>Murgeshpalya, Bangalore - 560017</p>
-							<p>Land Mark: Opp Total Mall , Old airport road</p>
-							<p class="fa fa-whatsapp fa-lg"> (+91)-9036897486</p>
-							<p class="fa fa-mobile-phone fa-lg"> (+91)-9980133150</p>
-							<p class="fa fa-phone-square fa-lg"> (080)-42021197</p>
-							<p class="fa fa-envelope-square fa-lg"> ejmusiq@gmail.com</p>
-							<p class="fa fa-envelope-square fa-lg"> ej@ejmusiq.com</p>
-						</div>
-					</div>
-					<!-- end contact address -->
-					
-					<!-- contact form -->
-					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="contact-form">
-							<h3>Say hello!</h3>
-							<form action="#" id="contact-form">
-								<div class="input-group name-email">
-									<div class="input-field">
-										<input type="text" name="name" id="name" placeholder="Name" class="form-control">
-									</div>
-									<div class="input-field">
-										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
-									</div>
-								</div>
-								<div class="input-group">
-									<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
-								</div>
-								<div class="input-group">
-									<input type="submit" id="form-submit" class="pull-right" value="Send message">
-								</div>
-							</form>
-						</div>
-					</div>
-					<!-- end contact form -->
-					
-					<!-- footer social links -->
-					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
-						<ul class="footer-social">
-							<li><a href="https://www.twitter.com/Themefisher"><i class="fa fa-twitter fa-2x"></i></a></li>
-							<li><a href="https://www.facebook.com/Themefisher"><i class="fa fa-facebook fa-2x"></i></a></li>
-						</ul>
-					</div>
-					<!-- end footer social links -->
-					
-				</div>
-			</div>
-			
-			<!-- Google map -->
-			<div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
-			<!-- End Google map -->
-			
-		</section>
-		
-        <!--
-        End Contact Us
-        ==================================== -->
-    	<div class="footer">
-			<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-double-up fa-4x"></i></a>
 		</div>
-		<!-- Essential jQuery Plugins
-		================================================== -->
-		<!-- Main jQuery -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-		<!-- Single Page Nav -->
-        <script src="js/jquery.singlePageNav.min.js"></script>
-		<!-- Twitter Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-		<!-- jquery.fancybox.pack -->
-        <script src="js/jquery.fancybox.pack.js"></script>
-		<!-- jquery.isotope -->
-        <script src="js/jquery.isotope.js"></script>
-		<!-- jquery.parallax -->
-        <script src="js/jquery.parallax-1.1.3.js"></script>
-		<!-- jquery.countTo -->
-        <script src="js/jquery-countTo.js"></script>
-		<!-- jquery.appear -->
-        <script src="js/jquery.appear.js"></script>
-		<!-- Contact form validation -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-		<!-- Google Map -->
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		<!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
-		<!-- jquery easing -->
-        <script src="js/wow.min.js"></script>
-		<script>
-			var wow = new WOW ({
-				boxClass:     'wow',      // animated element css class (default is wow)
-				animateClass: 'animated', // animation css class (default is animated)
-				offset:       120,          // distance to the element when triggering the animation (default is 0)
-				mobile:       false,       // trigger animations on mobile devices (default is true)
-				live:         true        // act on asynchronously loaded content (default is true)
-			  }
-			);
-			wow.init();
-		</script> 
-		<!-- Custom Functions -->
-        <script src="js/custom.js"></script>
-		
-		<script type="text/javascript">
-			$(function(){
-				/* ========================================================================= */
-				/*	Contact Form
-				/* ========================================================================= */
-				
-				$('#contact-form').validate({
-					rules: {
-						name: {
-							required: true,
-							minlength: 2
-						},
-						email: {
-							required: true,
-							email: true
-						},
-						message: {
-							required: true
-						}
-					},
-					messages: {
-						name: {
-							required: "come on, you have a name don't you?",
-							minlength: "your name must consist of at least 2 characters"
-						},
-						email: {
-							required: "no email, no message"
-						},
-						message: {
-							required: "um...yea, you have to write something to send this form.",
-							minlength: "thats all? really?"
-						}
-					},
-					submitHandler: function(form) {
-						$(form).ajaxSubmit({
-							type:"POST",
-							data: $(form).serialize(),
-							url:"process.php",
-							success: function() {
-								$('#contact-form :input').attr('disabled', 'disabled');
-								$('#contact-form').fadeTo( "slow", 0.15, function() {
-									$(this).find(':input').attr('disabled', 'disabled');
-									$(this).find('label').css('cursor','default');
-									$('#success').fadeIn();
-								});
-							},
-							error: function() {
-								$('#contact-form').fadeTo( "slow", 0.15, function() {
-									$('#error').fadeIn();
-								});
-							}
-						});
-					}
+	</div>
+
+</section>
+
+<!--
+End Gallery
+==================================== -->
+
+
+
+<!--
+Some fun facts
+==================================== -->
+
+<section id="facts" class="facts">
+	<div class="parallax-overlay">
+		<div class="container">
+			<div class="row number-counters">
+
+				<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+					<h2>Some Fun Facts</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<!-- first count item -->
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
+					<div class="counters-item">
+						<i class="fa fa-clock-o fa-3x"></i>
+						<strong data-to="3200">0</strong>
+						<!-- Set Your Number here. i,e. data-to="56" -->
+						<p>Hours of Work</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="counters-item">
+						<i class="fa fa-users fa-3x"></i>
+						<strong data-to="120">0</strong>
+						<!-- Set Your Number here. i,e. data-to="56" -->
+						<p>Satisfied Clients</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+					<div class="counters-item">
+						<i class="fa fa-rocket fa-3x"></i>
+						<strong data-to="360">0</strong>
+						<!-- Set Your Number here. i,e. data-to="56" -->
+						<p> Projects Delivered </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="counters-item">
+						<i class="fa fa-trophy fa-3x"></i>
+						<strong data-to="6454">0</strong>
+						<!-- Set Your Number here. i,e. data-to="56" -->
+						<p>Awards Won</p>
+					</div>
+				</div>
+				<!-- end first count item -->
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--
+End Some fun facts
+==================================== -->
+
+
+<!--
+Contact Us
+==================================== -->
+
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="row mb50">
+
+			<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+				<h2>Wanna Talk?</h2>
+				<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+			</div>
+
+			<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+				<p>Drop by and say Hi…</p>
+			</div>
+
+			<!-- contact address -->
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
+				<div class="contact-address">
+					<h3>EJ Sound Studios</h3>
+					<p>#118 Nesa's Nest, 8th Cross, N.R. Colony</p>
+					<p>Murgeshpalya, Bangalore - 560017</p>
+					<p>Land Mark: Opp Total Mall , Old airport road</p>
+					<p class="fa fa-whatsapp fa-lg"> (+91)-9036897486</p>
+					<p class="fa fa-mobile-phone fa-lg"> (+91)-9980133150</p>
+					<p class="fa fa-phone-square fa-lg"> (080)-42021197</p>
+					<p class="fa fa-envelope-square fa-lg"> ejmusiq@gmail.com</p>
+					<p class="fa fa-envelope-square fa-lg"> ej@ejmusiq.com</p>
+				</div>
+			</div>
+			<!-- end contact address -->
+
+			<!-- contact form -->
+			<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+				<div class="contact-form">
+					<h3>Say hello!</h3>
+					<form action="#" id="contact-form">
+						<div class="input-group name-email">
+							<div class="input-field">
+								<input type="text" name="name" id="name" placeholder="Name" class="form-control">
+							</div>
+							<div class="input-field">
+								<input type="email" name="email" id="email" placeholder="Email" class="form-control">
+							</div>
+						</div>
+						<div class="input-group">
+							<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+						</div>
+						<div class="input-group">
+							<input type="submit" id="form-submit" class="pull-right" value="Send message">
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- end contact form -->
+
+			<!-- footer social links -->
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
+				<ul class="footer-social">
+					<li><a href="https://www.twitter.com/Themefisher"><i class="fa fa-twitter fa-2x"></i></a></li>
+					<li><a href="https://www.facebook.com/Themefisher"><i class="fa fa-facebook fa-2x"></i></a></li>
+				</ul>
+			</div>
+			<!-- end footer social links -->
+
+		</div>
+	</div>
+
+	<!-- Google map -->
+	<div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+	<!-- End Google map -->
+
+</section>
+
+<!--
+End Contact Us
+==================================== -->
+<div class="footer">
+	<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-double-up fa-4x"></i></a>
+</div>
+<!-- Essential jQuery Plugins
+	================================================== -->
+	<!-- Main jQuery -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- Single Page Nav -->
+	<script src="js/jquery.singlePageNav.min.js"></script>
+	<!-- Twitter Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- jquery.fancybox.pack -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<!-- jquery.isotope -->
+	<script src="js/jquery.isotope.js"></script>
+	<!-- jquery.parallax -->
+	<script src="js/jquery.parallax-1.1.3.js"></script>
+	<!-- jquery.countTo -->
+	<script src="js/jquery-countTo.js"></script>
+	<!-- jquery.appear -->
+	<script src="js/jquery.appear.js"></script>
+	<!-- Contact form validation -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+	<!-- Google Map -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<!-- jquery easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- jquery easing -->
+	<script src="js/wow.min.js"></script>
+	<script>
+		var wow = new WOW ({
+boxClass:     'wow',      // animated element css class (default is wow)
+animateClass: 'animated', // animation css class (default is animated)
+offset:       120,          // distance to the element when triggering the animation (default is 0)
+mobile:       false,       // trigger animations on mobile devices (default is true)
+live:         true        // act on asynchronously loaded content (default is true)
+}
+);
+		wow.init();
+	</script>
+	<!-- Custom Functions -->
+	<script src="js/custom.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			/* ========================================================================= */
+/*	Contact Form
+/* ========================================================================= */
+
+$('#contact-form').validate({
+	rules: {
+		name: {
+			required: true,
+			minlength: 2
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		message: {
+			required: true
+		}
+	},
+	messages: {
+		name: {
+			required: "come on, you have a name don't you?",
+			minlength: "your name must consist of at least 2 characters"
+		},
+		email: {
+			required: "no email, no message"
+		},
+		message: {
+			required: "um...yea, you have to write something to send this form.",
+			minlength: "thats all? really?"
+		}
+	},
+	submitHandler: function(form) {
+		$(form).ajaxSubmit({
+			type:"POST",
+			data: $(form).serialize(),
+			url:"process.php",
+			success: function() {
+				$('#contact-form :input').attr('disabled', 'disabled');
+				$('#contact-form').fadeTo( "slow", 0.15, function() {
+					$(this).find(':input').attr('disabled', 'disabled');
+					$(this).find('label').css('cursor','default');
+					$('#success').fadeIn();
 				});
-			});
-		</script>
-    </body>
+			},
+			error: function() {
+				$('#contact-form').fadeTo( "slow", 0.15, function() {
+					$('#error').fadeIn();
+				});
+			}
+		});
+	}
+});
+});
+</script>
+</body>
 </html>

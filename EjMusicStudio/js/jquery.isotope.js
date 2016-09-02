@@ -9,10 +9,10 @@
  * Copyright 2012 David DeSandro / Metafizzy
  */
 
-/*jshint asi: true, browser: true, curly: true, eqeqeq: true, forin: false, immed: false, newcap: true, noempty: true, strict: true, undef: true */
-/*global jQuery: false */
+ /*jshint asi: true, browser: true, curly: true, eqeqeq: true, forin: false, immed: false, newcap: true, noempty: true, strict: true, undef: true */
+ /*global jQuery: false */
 
-(function( window, $, undefined ){
+ (function( window, $, undefined ){
 
   'use strict';
 
@@ -32,7 +32,7 @@
 
   var getStyleProperty = function( propName ) {
     var style = document.documentElement.style,
-        prefixed;
+    prefixed;
 
     // test standard property first
     if ( typeof style[propName] === 'string' ) {
@@ -52,7 +52,7 @@
   };
 
   var transformProp = getStyleProperty('transform'),
-      transitionProp = getStyleProperty('transitionProperty');
+  transitionProp = getStyleProperty('transitionProperty');
 
 
   // ========================= miniModernizr ===============================
@@ -74,9 +74,9 @@
   /*
    * This version whittles down the script just to check support for
    * CSS transitions, transforms, and 3D transforms.
-  */
+   */
 
-  var tests = {
+   var tests = {
     csstransforms: function() {
       return !!transformProp;
     },
@@ -86,10 +86,10 @@
       // double check for Chrome's false positive
       if ( test ) {
         var vendorCSSPrefixes = ' -o- -moz- -ms- -webkit- -khtml- '.split(' '),
-            mediaQuery = '@media (' + vendorCSSPrefixes.join('transform-3d),(') + 'modernizr)',
-            $style = $('<style>' + mediaQuery + '{#modernizr{height:3px}}' + '</style>')
-                        .appendTo('head'),
-            $div = $('<div id="modernizr" />').appendTo('html');
+        mediaQuery = '@media (' + vendorCSSPrefixes.join('transform-3d),(') + 'modernizr)',
+        $style = $('<style>' + mediaQuery + '{#modernizr{height:3px}}' + '</style>')
+        .appendTo('head'),
+        $div = $('<div id="modernizr" />').appendTo('html');
 
         test = $div.height() === 3;
 
@@ -144,11 +144,13 @@
    *  or falls back to 2D transforms.
    */
 
-  if ( Modernizr.csstransforms ) {
+   if ( Modernizr.csstransforms ) {
 
         // i.e. transformFnNotations.scale(0.5) >> 'scale3d( 0.5, 0.5, 1)'
-    var transformFnNotations = Modernizr.csstransforms3d ?
+        var transformFnNotations = Modernizr.csstransforms3d ?
       { // 3D transform functions
+
+        //Puppy - Added buffer to the translate value
         translate : function ( position ) {
           return 'translate3d(' + position[0] + 'px, ' + position[1] + 'px, 0) ';
         },
@@ -164,11 +166,11 @@
           return 'scale(' + scale + ') ';
         }
       }
-    ;
+      ;
 
-    var setIsoTransform = function ( elem, name, value ) {
+      var setIsoTransform = function ( elem, name, value ) {
           // unpack current transform data
-      var data =  $.data( elem, 'isoTransform' ) || {},
+          var data =  $.data( elem, 'isoTransform' ) || {},
           newData = {},
           fnName,
           transformObj = {},
@@ -188,7 +190,7 @@
       // ideally, we could loop through this give an array, but since we only have
       // a couple transforms we're keeping track of, we'll do it like so
       var translateFn = transformObj.translate || '',
-          scaleFn = transformObj.scale || '',
+      scaleFn = transformObj.scale || '',
           // sorting so translate always comes first
           valueFns = translateFn + scaleFn;
 
@@ -227,6 +229,13 @@
     $.cssNumber.translate = true;
 
     $.cssHooks.translate = {
+
+      //Puppy - Video and Image alignment issue got fixed
+
+      leftVideoIndex:0,
+      topVideoIndex:0,
+      leftFigindex:0,
+      topFigIndex:0,
       set: function( elem, value ) {
 
         // uncomment this bit if you want to properly parse strings
@@ -241,7 +250,29 @@
         //     val = parseInt( val );
         //   }
         // }
+        if($(elem).prop('nodeName')=='DIV'){
+          value[0] = this.leftVideoIndex%3 * ($(elem).find('a').find('img').width() + 30);
+          value[1] = this.topVideoIndex%3 * ($(elem).find('a').find('img').height() +30);
+          if(this.leftVideoIndex==2){
+            this.leftVideoIndex = 0;
+            this.topVideoIndex++;
+          }
+          else{
+            this.leftVideoIndex++;
+          }
+        }
+        else if($(elem).prop('nodeName')=='FIGURE'){
+          value[0] = value[0] + this.leftFigindex%3 * 30;
+          value[1] = value[1] + this.topFigIndex%3 * 30;
 
+          if(this.leftFigindex==2){
+            this.leftFigindex = 0;
+            this.topFigIndex++;
+          }
+          else{
+            this.leftFigindex++;
+          }
+        }
         setIsoTransform( elem, 'translate', value );
       },
 
@@ -279,11 +310,11 @@
    * Licensed under the MIT license.
    */
 
-  var $event = $.event,
-      dispatchMethod = $.event.handle ? 'handle' : 'dispatch',
-      resizeTimeout;
+   var $event = $.event,
+   dispatchMethod = $.event.handle ? 'handle' : 'dispatch',
+   resizeTimeout;
 
-  $event.special.smartresize = {
+   $event.special.smartresize = {
     setup: function() {
       $(this).bind( "resize", $event.special.smartresize.handler );
     },
@@ -293,7 +324,7 @@
     handler: function( event, execAsap ) {
       // Save the context
       var context = this,
-          args = arguments;
+      args = arguments;
 
       // set correct event type
       event.type = "smartresize";
@@ -484,13 +515,13 @@
       switch ( animationEngine ) {
         case 'css' :
         case 'none' :
-          isUsingJQueryAnimation = false;
-          break;
+        isUsingJQueryAnimation = false;
+        break;
         case 'jquery' :
-          isUsingJQueryAnimation = true;
-          break;
+        isUsingJQueryAnimation = true;
+        break;
         default : // best available
-          isUsingJQueryAnimation = !Modernizr.csstransitions;
+        isUsingJQueryAnimation = !Modernizr.csstransitions;
       }
       this.isUsingJQueryAnimation = isUsingJQueryAnimation;
       this._updateUsingTransforms();
@@ -502,7 +533,7 @@
 
     _updateUsingTransforms : function() {
       var usingTransforms = this.usingTransforms = this.options.transformsEnabled &&
-        Modernizr.csstransforms && Modernizr.csstransitions && !this.isUsingJQueryAnimation;
+      Modernizr.csstransforms && Modernizr.csstransitions && !this.isUsingJQueryAnimation;
 
       // prevent scales when transforms are disabled
       if ( !usingTransforms ) {
@@ -524,9 +555,9 @@
       }
 
       var hiddenClass    = this.options.hiddenClass,
-          hiddenSelector = '.' + hiddenClass,
-          $hiddenAtoms   = $atoms.filter( hiddenSelector ),
-          $atomsToShow   = $hiddenAtoms;
+      hiddenSelector = '.' + hiddenClass,
+      $hiddenAtoms   = $atoms.filter( hiddenSelector ),
+      $atomsToShow   = $hiddenAtoms;
 
       if ( filter !== '*' ) {
         $atomsToShow = $hiddenAtoms.filter( filter );
@@ -544,8 +575,8 @@
 
     updateSortData : function( $atoms, isIncrementingElemCount ) {
       var instance = this,
-          getSortData = this.options.getSortData,
-          $this, sortData;
+      getSortData = this.options.getSortData,
+      $this, sortData;
       $atoms.each(function(){
         $this = $(this);
         sortData = {};
@@ -567,11 +598,11 @@
     _sort : function() {
 
       var sortBy = this.options.sortBy,
-          getSorter = this._getSorter,
-          sortDir = this.options.sortAscending ? 1 : -1,
-          sortFn = function( alpha, beta ) {
-            var a = getSorter( alpha, sortBy ),
-                b = getSorter( beta, sortBy );
+      getSorter = this._getSorter,
+      sortDir = this.options.sortAscending ? 1 : -1,
+      sortFn = function( alpha, beta ) {
+        var a = getSorter( alpha, sortBy ),
+        b = getSorter( beta, sortBy );
             // fall back to original order if data matches
             if ( a === b && sortBy !== 'original-order') {
               a = getSorter( alpha, 'original-order' );
@@ -580,12 +611,12 @@
             return ( ( a > b ) ? 1 : ( a < b ) ? -1 : 0 ) * sortDir;
           };
 
-      this.$filteredAtoms.sort( sortFn );
-    },
+          this.$filteredAtoms.sort( sortFn );
+        },
 
-    _getSorter : function( elem, sortBy ) {
-      return $.data( elem, 'isotope-sort-data' )[ sortBy ];
-    },
+        _getSorter : function( elem, sortBy ) {
+          return $.data( elem, 'isotope-sort-data' )[ sortBy ];
+        },
 
     // ====================== Layout Helpers ======================
 
@@ -634,12 +665,12 @@
       // are we animating the layout arrangement?
       // use plugin-ish syntax for css or animate
       var styleFn = !this.isLaidOut ? 'css' : (
-            this.isUsingJQueryAnimation ? 'animate' : 'css'
-          ),
-          animOpts = this.options.animationOptions,
-          onLayout = this.options.onLayout,
-          objStyleFn, processor,
-          triggerCallbackNow, callbackFn;
+        this.isUsingJQueryAnimation ? 'animate' : 'css'
+        ),
+      animOpts = this.options.animationOptions,
+      onLayout = this.options.onLayout,
+      objStyleFn, processor,
+      triggerCallbackNow, callbackFn;
 
       // default styleQueue processor, may be overwritten down below
       processor = function( i, obj ) {
@@ -660,7 +691,7 @@
             // array of possible callbacks to trigger
             callbacks = [ callback, onLayout, animOpts.complete ],
             instance = this;
-        triggerCallbackNow = true;
+            triggerCallbackNow = true;
         // trigger callback only once
         callbackFn = function() {
           if ( isCallbackTriggered ) {
@@ -684,9 +715,9 @@
         } else if ( Modernizr.csstransitions ) {
           // detect if first item has transition
           var i = 0,
-              firstItem = this.styleQueue[0],
-              testElem = firstItem && firstItem.$el,
-              styleObj;
+          firstItem = this.styleQueue[0],
+          testElem = firstItem && firstItem.$el,
+          styleObj;
           // get first non-empty jQ object
           while ( !testElem || !testElem.length ) {
             styleObj = this.styleQueue[ i++ ];
@@ -704,11 +735,11 @@
               obj.$el[ styleFn ]( obj.style, animOpts )
                 // trigger callback at transition end
                 .one( transitionEndEvent, callbackFn );
-            };
-            triggerCallbackNow = false;
+              };
+              triggerCallbackNow = false;
+            }
           }
         }
-      }
 
       // process styleQueue
       $.each( this.styleQueue, processor );
@@ -848,17 +879,17 @@
       var options = this.options;
 
       this.$allAtoms
-        .removeClass( options.hiddenClass + ' ' + options.itemClass )
-        .each(function(){
-          var style = this.style;
-          style.position = '';
-          style.top = '';
-          style.left = '';
-          style.opacity = '';
-          if ( usingTransforms ) {
-            style[ transformProp ] = '';
-          }
-        });
+      .removeClass( options.hiddenClass + ' ' + options.itemClass )
+      .each(function(){
+        var style = this.style;
+        style.position = '';
+        style.top = '';
+        style.left = '';
+        style.opacity = '';
+        if ( usingTransforms ) {
+          style[ transformProp ] = '';
+        }
+      });
 
       // re-apply saved container styles
       var elemStyle = this.element[0].style;
@@ -867,10 +898,10 @@
       }
 
       this.element
-        .unbind('.isotope')
-        .undelegate( '.' + options.hiddenClass, 'click' )
-        .removeClass( options.containerClass )
-        .removeData('isotope');
+      .unbind('.isotope')
+      .undelegate( '.' + options.hiddenClass, 'click' )
+      .removeClass( options.containerClass )
+      .removeData('isotope');
 
       $window.unbind('.isotope');
 
@@ -884,20 +915,20 @@
     // i.e. this.masonry.columnWidth = 200
     _getSegments : function( isRows ) {
       var namespace = this.options.layoutMode,
-          measure  = isRows ? 'rowHeight' : 'columnWidth',
-          size     = isRows ? 'height' : 'width',
-          segmentsName = isRows ? 'rows' : 'cols',
-          containerSize = this.element[ size ](),
-          segments,
+      measure  = isRows ? 'rowHeight' : 'columnWidth',
+      size     = isRows ? 'height' : 'width',
+      segmentsName = isRows ? 'rows' : 'cols',
+      containerSize = this.element[ size ](),
+      segments,
                     // i.e. options.masonry && options.masonry.columnWidth
-          segmentSize = this.options[ namespace ] && this.options[ namespace ][ measure ] ||
+                    segmentSize = this.options[ namespace ] && this.options[ namespace ][ measure ] ||
                     // or use the size of the first item, i.e. outerWidth
                     this.$filteredAtoms[ 'outer' + capitalize(size) ](true) ||
                     // if there's no items, use size of container
                     containerSize;
 
-      segments = Math.floor( containerSize / segmentSize );
-      segments = Math.max( segments, 1 );
+                    segments = Math.floor( containerSize / segmentSize );
+                    segments = Math.max( segments, 1 );
 
       // i.e. this.masonry.cols = ....
       this[ namespace ][ segmentsName ] = segments;
@@ -908,8 +939,8 @@
 
     _checkIfSegmentsChanged : function( isRows ) {
       var namespace = this.options.layoutMode,
-          segmentsName = isRows ? 'rows' : 'cols',
-          prevSegments = this[ namespace ][ segmentsName ];
+      segmentsName = isRows ? 'rows' : 'cols',
+      prevSegments = this[ namespace ][ segmentsName ];
       // update cols/rows
       this._getSegments( isRows );
       // return if updated cols/rows is not equal to previous
@@ -932,23 +963,23 @@
 
     _masonryLayout : function( $elems ) {
       var instance = this,
-          props = instance.masonry;
+      props = instance.masonry;
       $elems.each(function(){
         var $this  = $(this),
             //how many columns does this brick span
             colSpan = Math.ceil( $this.outerWidth(true) / props.columnWidth );
-        colSpan = Math.min( colSpan, props.cols );
+            colSpan = Math.min( colSpan, props.cols );
 
-        if ( colSpan === 1 ) {
+            if ( colSpan === 1 ) {
           // if brick spans only one column, just like singleMode
           instance._masonryPlaceBrick( $this, props.colYs );
         } else {
           // brick spans more than one column
           // how many different places could this brick fit horizontally
           var groupCount = props.cols + 1 - colSpan,
-              groupY = [],
-              groupColY,
-              i;
+          groupY = [],
+          groupColY,
+          i;
 
           // for each group potential horizontal position
           for ( i=0; i < groupCount; i++ ) {
@@ -968,7 +999,7 @@
     _masonryPlaceBrick : function( $brick, setY ) {
       // get the minimum Y value from the columns
       var minimumY = Math.min.apply( Math, setY ),
-          shortCol = 0;
+      shortCol = 0;
 
       // Find index of short column, the first from the left
       for (var i=0, len = setY.length; i < len; i++) {
@@ -980,12 +1011,12 @@
 
       // position the brick
       var x = this.masonry.columnWidth * shortCol,
-          y = minimumY;
+      y = minimumY;
       this._pushPosition( $brick, x, y );
 
       // apply setHeight to necessary columns
       var setHeight = minimumY + $brick.outerHeight(true),
-          setSpan = this.masonry.cols + 1 - len;
+      setSpan = this.masonry.cols + 1 - len;
       for ( i=0; i < setSpan; i++ ) {
         this.masonry.colYs[ shortCol + i ] = setHeight;
       }
@@ -1013,13 +1044,13 @@
 
     _fitRowsLayout : function( $elems ) {
       var instance = this,
-          containerWidth = this.element.width(),
-          props = this.fitRows;
+      containerWidth = this.element.width(),
+      props = this.fitRows;
 
       $elems.each( function() {
         var $this = $(this),
-            atomW = $this.outerWidth(true),
-            atomH = $this.outerHeight(true);
+        atomW = $this.outerWidth(true),
+        atomH = $this.outerHeight(true);
 
         if ( props.x !== 0 && atomW + props.x > containerWidth ) {
           // if this element cannot fit in the current row
@@ -1059,13 +1090,13 @@
 
     _cellsByRowLayout : function( $elems ) {
       var instance = this,
-          props = this.cellsByRow;
+      props = this.cellsByRow;
       $elems.each( function(){
         var $this = $(this),
-            col = props.index % props.cols,
-            row = Math.floor( props.index / props.cols ),
-            x = ( col + 0.5 ) * props.columnWidth - $this.outerWidth(true) / 2,
-            y = ( row + 0.5 ) * props.rowHeight - $this.outerHeight(true) / 2;
+        col = props.index % props.cols,
+        row = Math.floor( props.index / props.cols ),
+        x = ( col + 0.5 ) * props.columnWidth - $this.outerWidth(true) / 2,
+        y = ( row + 0.5 ) * props.rowHeight - $this.outerHeight(true) / 2;
         instance._pushPosition( $this, x, y );
         props.index ++;
       });
@@ -1122,22 +1153,22 @@
 
     _masonryHorizontalLayout : function( $elems ) {
       var instance = this,
-          props = instance.masonryHorizontal;
+      props = instance.masonryHorizontal;
       $elems.each(function(){
         var $this  = $(this),
             //how many rows does this brick span
             rowSpan = Math.ceil( $this.outerHeight(true) / props.rowHeight );
-        rowSpan = Math.min( rowSpan, props.rows );
+            rowSpan = Math.min( rowSpan, props.rows );
 
-        if ( rowSpan === 1 ) {
+            if ( rowSpan === 1 ) {
           // if brick spans only one column, just like singleMode
           instance._masonryHorizontalPlaceBrick( $this, props.rowXs );
         } else {
           // brick spans more than one row
           // how many different places could this brick fit horizontally
           var groupCount = props.rows + 1 - rowSpan,
-              groupX = [],
-              groupRowX, i;
+          groupX = [],
+          groupRowX, i;
 
           // for each group potential horizontal position
           for ( i=0; i < groupCount; i++ ) {
@@ -1155,7 +1186,7 @@
     _masonryHorizontalPlaceBrick : function( $brick, setX ) {
       // get the minimum Y value from the columns
       var minimumX  = Math.min.apply( Math, setX ),
-          smallRow  = 0;
+      smallRow  = 0;
       // Find index of smallest row, the first from the top
       for (var i=0, len = setX.length; i < len; i++) {
         if ( setX[i] === minimumX ) {
@@ -1166,12 +1197,12 @@
 
       // position the brick
       var x = minimumX,
-          y = this.masonryHorizontal.rowHeight * smallRow;
+      y = this.masonryHorizontal.rowHeight * smallRow;
       this._pushPosition( $brick, x, y );
 
       // apply setHeight to necessary columns
       var setWidth = minimumX + $brick.outerWidth(true),
-          setSpan = this.masonryHorizontal.rows + 1 - len;
+      setSpan = this.masonryHorizontal.rows + 1 - len;
       for ( i=0; i < setSpan; i++ ) {
         this.masonryHorizontal.rowXs[ smallRow + i ] = setWidth;
       }
@@ -1199,12 +1230,12 @@
 
     _fitColumnsLayout : function( $elems ) {
       var instance = this,
-          containerHeight = this.element.height(),
-          props = this.fitColumns;
+      containerHeight = this.element.height(),
+      props = this.fitColumns;
       $elems.each( function() {
         var $this = $(this),
-            atomW = $this.outerWidth(true),
-            atomH = $this.outerHeight(true);
+        atomW = $this.outerWidth(true),
+        atomH = $this.outerHeight(true);
 
         if ( props.y !== 0 && atomH + props.y > containerHeight ) {
           // if this element cannot fit in the current column
@@ -1245,13 +1276,13 @@
 
     _cellsByColumnLayout : function( $elems ) {
       var instance = this,
-          props = this.cellsByColumn;
+      props = this.cellsByColumn;
       $elems.each( function(){
         var $this = $(this),
-            col = Math.floor( props.index / props.rows ),
-            row = props.index % props.rows,
-            x = ( col + 0.5 ) * props.columnWidth - $this.outerWidth(true) / 2,
-            y = ( row + 0.5 ) * props.rowHeight - $this.outerHeight(true) / 2;
+        col = Math.floor( props.index / props.rows ),
+        row = props.index % props.rows,
+        x = ( col + 0.5 ) * props.columnWidth - $this.outerWidth(true) / 2,
+        y = ( row + 0.5 ) * props.rowHeight - $this.outerHeight(true) / 2;
         instance._pushPosition( $this, x, y );
         props.index ++;
       });
@@ -1314,10 +1345,10 @@
 
   $.fn.imagesLoaded = function( callback ) {
     var $this = this,
-        $images = $this.find('img').add( $this.filter('img') ),
-        len = $images.length,
-        blank = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==',
-        loaded = [];
+    $images = $this.find('img').add( $this.filter('img') ),
+    len = $images.length,
+    blank = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==',
+    loaded = [];
 
     function triggerCallback() {
       callback.call( $this, $images );
@@ -1376,7 +1407,7 @@
         var instance = $.data( this, 'isotope' );
         if ( !instance ) {
           logError( "cannot call methods on isotope prior to initialization; " +
-              "attempted to call method '" + options + "'" );
+            "attempted to call method '" + options + "'" );
           return;
         }
         if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
