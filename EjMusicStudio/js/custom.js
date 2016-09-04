@@ -29,7 +29,7 @@ $(document).ready(function(){
 			console.log('done scrolling');
 		}
 	});
-	
+
     $(window).scroll(function () {
         if ($(window).scrollTop() > 400) {
             $("#navigation").css("background-color","#FF6600");
@@ -37,27 +37,27 @@ $(document).ready(function(){
             $("#navigation").css("background-color","rgba(16, 22, 54, 0.2)");
         }
     });
-	
+
 	/* ========================================================================= */
 	/*	Fix Slider Height
-	/* ========================================================================= */	
+	/* ========================================================================= */
 
 	var slideHeight = $(window).height();
-	
+
 	$('#slider, .carousel.slide, .carousel-inner, .carousel-inner .item').css('height',slideHeight);
 
 	$(window).resize(function(){'use strict',
 		$('#slider, .carousel.slide, .carousel-inner, .carousel-inner .item').css('height',slideHeight);
 	});
-	
-	
+
+
 	/* ========================================================================= */
 	/*	Portfolio Filtering
-	/* ========================================================================= */	
-	
-	
-    var $container = $('.project-wrapper');
-    $container.isotope({
+	/* ========================================================================= */
+
+
+    var $containerVideo = $('.project-wrapper.video-gallery-wrapper');
+    $containerVideo.isotope({
         filter: '*',
         animationOptions: {
             duration: 750,
@@ -65,13 +65,22 @@ $(document).ready(function(){
             queue: false
         }
     });
- 
-    $('.work-filter a').click(function(){
-        $('.work-filter .current').removeClass('current');
+
+    var $containerPhoto = $('.project-wrapper.photo-gallery-wrapper');
+    $containerPhoto.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+
+    $('.work-filter.videoGallery a').click(function(){
+        $('.work-filter.videoGallery .current').removeClass('current');
         $(this).addClass('current');
- 
         var selector = $(this).attr('data-filter');
-        $container.isotope({
+        $containerVideo.isotope({
             filter: selector,
             animationOptions: {
                 duration: 750,
@@ -80,9 +89,24 @@ $(document).ready(function(){
             }
          });
          return false;
-    }); 
-	
-	
+    });
+
+    $('.work-filter.photoGallery a').click(function(){
+        $('.work-filter.photoGallery .current').removeClass('current');
+        $(this).addClass('current');
+        var selector = $(this).attr('data-filter');
+        $containerPhoto.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    });
+
+
 	$(".fancybox, .fancyboxVideo").fancybox({
 		padding: 0,
 
@@ -100,7 +124,7 @@ $(document).ready(function(){
                         this.href = url
                     }
 	});
-    
+
    /* $(".various").fancybox({
                     maxWidth    : 800,
                     maxHeight   : 600,
@@ -120,17 +144,17 @@ $(document).ready(function(){
                         this.href = url
                     }
                 });
-                
+
                 */
-    
-    
-	
+
+
+
 	/* ========================================================================= */
 	/*	Parallax
-	/* ========================================================================= */	
-	
+	/* ========================================================================= */
+
 	$('#facts').parallax("50%", 0.3);
-	
+
 	/* ========================================================================= */
 	/*	Timer count
 	/* ========================================================================= */
@@ -147,12 +171,12 @@ $(document).ready(function(){
             })
         })
     });
-	
+
 	/* ========================================================================= */
 	/*	Back to Top
 	/* ========================================================================= */
-	
-	
+
+
     $(window).scroll(function () {
         if ($(window).scrollTop() > 400) {
             $("#back-top").fadeIn(200)
@@ -165,7 +189,7 @@ $(document).ready(function(){
             scrollTop: 0
         }, 1500, "easeInOutExpo")
     });
-	
+
 });
 
 

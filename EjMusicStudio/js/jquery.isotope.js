@@ -150,7 +150,6 @@
         var transformFnNotations = Modernizr.csstransforms3d ?
       { // 3D transform functions
 
-        //Puppy - Added buffer to the translate value
         translate : function ( position ) {
           return 'translate3d(' + position[0] + 'px, ' + position[1] + 'px, 0) ';
         },
@@ -250,6 +249,13 @@
         //     val = parseInt( val );
         //   }
         // }
+
+        if(value[0] == 0 && value[1] == 0 ){
+          this.leftVideoIndex=0
+          this.topVideoIndex=0
+          this.leftFigindex=0
+          this.topFigIndex=0
+        }
         if($(elem).prop('nodeName')=='DIV'){
           value[0] = this.leftVideoIndex%3 * ($(elem).find('a').find('img').width() + 30);
           value[1] = this.topVideoIndex%3 * ($(elem).find('a').find('img').height() +30);
@@ -652,7 +658,7 @@
 
       // set the size of the container
       if ( this.options.resizesContainer ) {
-        var containerStyle = this[ '_' +  layoutMode + 'GetContainerSize' ]();
+        var containerStyle = this[ '_' +  layoutMode + 'GetContainerSize' ]( this.element);
         this.styleQueue.push({ $el: this.element, style: containerStyle });
       }
 
@@ -1023,9 +1029,13 @@
 
     },
 
-    _masonryGetContainerSize : function() {
+    _masonryGetContainerSize : function(ele) {
+      // PUPPY - length of child element and divide by 3 ( number of elements per row, if we
+      //get that dynamically then replace the value with 3)
+      // multiply by 20 ( the value again going to be a static value that comes from margin)
+      // Add 20 which is just buffer value
       var containerHeight = Math.max.apply( Math, this.masonry.colYs );
-      return { height: containerHeight };
+      return { height:((ele.children().length / 3) * 20 ) + containerHeight + 20 };
     },
 
     _masonryResizeChanged : function() {
